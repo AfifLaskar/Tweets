@@ -7,15 +7,15 @@ use Livewire\Component;
 class StoreTweet extends Component
 {
     public $body;
-    public $characters = 255;
+    public $characters = 280;
 
     protected $rules = [
-        'body' => 'required|string|max:255|min:3'
+        'body' => 'required|string|max:280|min:5'
     ];
 
     public function charactersRemaining()
     {
-        $this->characters = 255 - strlen($this->body);
+        $this->characters = 280 - strlen($this->body);
     }
 
     public function store()
@@ -33,7 +33,7 @@ class StoreTweet extends Component
         ]);
 
         $this->body = '';
-        $this->characters = 255;
+        $this->characters = 280;
     }
     
     public function render()

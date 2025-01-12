@@ -58,7 +58,7 @@ class Tweets extends Component
         $tweet->delete();
 
         $this->dispatchBrowserEvent('toastr:success', [
-            'message' => 'Tweet Deleted!'
+            'message' => 'Tweet Deleted!!!!!!!'
         ]);
     }
 

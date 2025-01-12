@@ -11,11 +11,11 @@ class FollowController extends Controller
         if(auth()->user()->following($user)){
             auth()->user()->unfollow($user);
 
-            return back()->with('success', 'Too Bad! You wont be able to chat with ' . $user->name . ' anymore! :(');
+            return back()->with('success', 'Too Bad! You arent Friends with ' . $user->name . ' anymore  :(');
         }
 
         auth()->user()->follow($user);
 
-        return back()->with('success', 'Great! You can now chat with ' . $user->name . '. :)');
+        return back()->with('success', 'Great! You are following ' . $user->name . '. :)');
     }
 }
