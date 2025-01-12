@@ -67,7 +67,7 @@
                 "hideMethod": "fadeOut",
             }
             
-            toastr.success("{{ Session::get('success') }}")
+            toastr.success("{{ Session::get('successful') }}")
         @endif
     </script>
 </body>
